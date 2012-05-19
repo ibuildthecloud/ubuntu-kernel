@@ -1787,9 +1787,11 @@ set_qf_format:
 					return 0;
 			} else
 				option = 1;	/* No argument, default to 1 */
+/*
 			if (option)
 				set_opt(sb, BARRIER);
 			else
+*/
 				clear_opt(sb, BARRIER);
 			break;
 		case Opt_ignore:
@@ -3224,8 +3226,10 @@ static int ext4_fill_super(struct super_block *sb, void *data, int silent)
 	sbi->s_min_batch_time = EXT4_DEF_MIN_BATCH_TIME;
 	sbi->s_max_batch_time = EXT4_DEF_MAX_BATCH_TIME;
 
+/*
 	if ((def_mount_opts & EXT4_DEFM_NOBARRIER) == 0)
 		set_opt(sb, BARRIER);
+*/
 
 	/*
 	 * enable delayed allocation by default
